@@ -1,0 +1,50 @@
+
+
+@import '../settings/colors';
+@import '../settings/fonts';
+
+//styles for two navigation rows
+@mixin navStyle {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  & li a{
+    border: 0.75px solid $primeBackground;
+    color: $primeFont;
+    font-size: 1.125em; //18px
+    margin-right: 2.563em; //41px
+    padding: 10px;
+    text-decoration: none;
+    transition: ease-out 0.3s;
+  }
+}
+
+.nav{
+  float: right;
+  margin-right: 6.563em; //105px
+  margin-top: 1.563em; // 25px
+  width: 50vw;
+}
+
+.top-nav{
+  @include navStyle;
+  margin-right: 1.063em; //17px
+  margin-bottom: 2.063em; //33px
+  & li a{
+    color: $secondaryFont;
+    font-size: 0.813em; //13px
+    &:hover{
+      border: 0.75px solid $yellow;
+    }
+  }
+}
+
+.bottom-nav{
+  @include navStyle;
+  & li a {
+    &:hover{
+      border: 0.75px solid $primeFont;
+      cursor: pointer;
+    }
+  }
+}

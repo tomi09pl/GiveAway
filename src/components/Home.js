@@ -1,13 +1,13 @@
 
 
 import React , {Component} from 'react';
-import Navigation from "./Home_1_Navigation";
+import Header from "./Header";
 
 class Home extends Component {
 
         render() {
                 return  (
-                        <Navigation/>
+                        <Header/>
                 )
         }
 }

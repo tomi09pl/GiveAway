@@ -4,8 +4,10 @@
 @import './settings/fonts';
 
 body {
+  background: $primeBackground;
   font-family: $font-base;
-  background: $white;
 }
 
-@import './components/Home_1_Navigation';
+@import 'components/Header';
+@import 'components/Nav';
+@import 'components/Decoration';

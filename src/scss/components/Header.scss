@@ -1,0 +1,64 @@
+
+
+@import '../settings/colors';
+@import '../settings/fonts';
+
+.costam{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 45%;
+  top: 30%;
+  & p{
+    color: $primeFont;
+    font-weight: normal;
+    font-size: 2.375em; //38px
+    letter-spacing: -0.76px;
+    margin:10px 0 ;
+    text-align: center;
+  }
+}
+
+.header{
+  //display: flex;
+  //flex-direction: column;
+}
+
+.headerImg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -23%;
+  z-index: -1;
+  background: transparent url("../../assets/Home-Hero-Image.jpg") 0% 0% no-repeat padding-box;
+  background-size: contain;
+}
+
+.headerButtons {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  & li a{
+    border: 0.75px solid $primeBackground;
+    color: $primeFont;
+    display:flex;
+    align-items: center;
+    font-size: 2.250em; //36px
+    font-weight: lighter;
+    letter-spacing: 0;
+    margin-right: 2.563em; //41px
+    //padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 310px;
+    height: 120px;
+    transition: ease-out 0.3s;
+    &:hover{
+      border: 0.75px solid $primeFont;
+    }
+  }
+}
+
