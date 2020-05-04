@@ -1,0 +1,17 @@
+@import '../settings/colors';
+
+.HomeCharitiesListTop-wrapper {
+  align-items: center;
+  background: $primeBackground;
+  color: $primeFont;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  & h2 {
+    font-size: 2em; //32px
+    font-weight: 500;
+    letter-spacing: -0.76px;
+  }
+}

@@ -3,6 +3,7 @@ import Header from "./Header";
 import HomeThreeColumns from "./HomeThreeColumns";
 import HomeSimpleSteps from "./HomeSimpleSteps";
 import HomeAboutUs from "./HomeAboutUs";
+import HomeCharitiesList from "./HomeCharitiesList";
 
 class Home extends Component {
 
@@ -13,6 +14,7 @@ class Home extends Component {
                 <HomeThreeColumns/>
                 <HomeSimpleSteps/>
                 <HomeAboutUs/>
+                <HomeCharitiesList/>
             </>
         )
     }

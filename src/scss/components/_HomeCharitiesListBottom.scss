@@ -1,0 +1,28 @@
+@import '../settings/colors';
+
+.charitiesList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+  & li {
+    align-items: center;
+    border: 0.75px solid $primeBackground;
+    color: $primeFont;
+    display: flex;
+    font-size: 1.75em;
+    font-weight: lighter;
+    justify-content: center;
+    margin:0 20px;
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: ease-out 0.3s;
+    width: 193px;
+
+    &:hover {
+      border: 0.75px solid $primeFont;
+      cursor: pointer;
+    };
+  }
+}
