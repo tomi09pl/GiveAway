@@ -1,0 +1,43 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+.HomeThreeColumns {
+  align-items: center;
+  background: transparent url('../../assets/3ColumnsBackground.png') 0 0 no-repeat padding-box;
+  display: flex;
+  height: 384px;
+  width: 1583px;
+  position: relative;
+  top: 612px;
+
+  & div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+
+    & div {
+      color: $darkOrange;
+      font-size: 5.625em; //90px
+      font-weight: lighter;
+    }
+
+    & h2 {
+      color: $primeFont;
+      font-size: 1.125em;
+      font-weight: 500;
+      letter-spacing: -0.36px;
+      text-transform: uppercase;
+    }
+
+    & p {
+      color: $primeFont;
+      //font-family: $font-alt;
+      font-size: 1em;
+      font-weight: 300;
+      letter-spacing: -0.32px;
+      padding: 0 3.125em;
+      text-align: center;
+    }
+  }
+}

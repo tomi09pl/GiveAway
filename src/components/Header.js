@@ -16,8 +16,8 @@ const Header = () => (
             <p>Donate your unwanted stuff into good hands</p>
             <Decoration/>
             <ul className='headerButtons'>
-                <li><Link to='/login'>DONATE</Link></li>
-                <li><Link to='/login'>ORDER COLLECTION</Link></li>
+                <li><Link to='/login'>DONATE STUFF</Link></li>
+                <li><Link to='/login'>ORGANISE COLLECTION</Link></li>
             </ul>
         </div>
 
