@@ -9,8 +9,8 @@ import Nav from './Nav'
 const Header = () => (
     <div className="header">
 
-        <div className="headerImg"></div>
         <Nav/>
+        <div className="headerImg"></div>
         <div className="costam">
             <p>Start helping!</p>
             <p>Donate your unwanted stuff into good hands</p>

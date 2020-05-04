@@ -25,6 +25,10 @@
   //flex-direction: column;
 }
 
+.headerImg {
+  height: 100vh;
+}
+
 .headerImg::before {
   content: "";
   position: absolute;

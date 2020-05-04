@@ -1,0 +1,41 @@
+@import '../settings/colors';
+
+.HomeAboutUs-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.aboutUs-content {
+  align-items: center;
+  background: $secondBackground;
+  color: $primeFont;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+  & h2 {
+    font-size: 2em; //32px
+    font-weight: 500;
+    letter-spacing: -0.76px;
+  }
+  & p {
+    font-size: 1.3em; //30px
+    font-weight: 400;
+    letter-spacing: -0.6px;
+    line-height: 43px;
+    text-align: center;
+    width: 26vw;
+  }
+}
+
+.aboutUs-signature {
+  align-self: flex-end;
+  margin-right: 50px;
+}
+
+.aboutUs-img {
+  background: transparent url('../../assets/People.jpg') 0 0 no-repeat padding-box;
+  background-size: cover;
+  height: 90vh;
+  width: 50vw;
+}

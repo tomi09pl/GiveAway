@@ -1,0 +1,23 @@
+@import "../settings/colors";
+
+.divider {
+  border: 1px solid $primeFont;
+  width: 4.375em;
+}
+
+.HomeSimpleStepsMiddle-wrapper {
+  background: $secondBackground;
+  color: $primeFont;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3em 0;
+  width: 99vw;
+}
+
+.step {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 180px;
+}

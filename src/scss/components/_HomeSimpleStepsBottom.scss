@@ -1,0 +1,25 @@
+@import "../settings/colors";
+
+.HomeSimpleStepsBottom-wrapper {
+  align-items: center;
+  display: flex;
+  height: 9.375em;
+  & a {
+    text-align: center;
+    padding: 20px;
+    width: 193px;
+    display: inline-block;
+    border: 0.75px solid $primeBackground;
+    color: $primeFont;
+    align-items: center;
+    font-size: 1.75em;
+    font-weight: lighter;
+    text-decoration: none;
+    transition: ease-out 0.3s;
+
+    &:hover {
+      border: 0.75px solid $primeFont;
+    };
+  }
+}
+

@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Header from "./Header";
 import HomeThreeColumns from "./HomeThreeColumns";
+import HomeSimpleSteps from "./HomeSimpleSteps";
+import HomeAboutUs from "./HomeAboutUs";
 
 class Home extends Component {
 
@@ -9,6 +11,8 @@ class Home extends Component {
             <>
                 <Header/>
                 <HomeThreeColumns/>
+                <HomeSimpleSteps/>
+                <HomeAboutUs/>
             </>
         )
     }

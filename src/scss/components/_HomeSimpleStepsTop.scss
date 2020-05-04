@@ -1,0 +1,15 @@
+@import '../settings/colors';
+
+.HomeSimpleStepsTop-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 9.375em;
+}
+
+.HomeSimpleSteps-title {
+  color: $primeFont;
+  font-size: 2.375em; //38px
+  font-weight: 400;
+  letter-spacing: -0.76px;
+}
