@@ -1,0 +1,88 @@
+@import "../settings/colors";
+
+.contact-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.contact-image {
+  background: transparent url('../../assets/Background-Contact-Form.jpg') 0 0 no-repeat padding-box;
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.2;
+  width: 50vw;
+}
+
+.contact-form{
+  //display: flex;
+  color: $primeFont;
+  margin-top: 3.25em;
+  width: 50%;
+}
+
+.contact-header {
+  align-items: center;
+  background: $primeBackground;
+  color: $primeFont;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  & h2 {
+    font-size: 2em; //32px
+    font-weight: 500;
+    letter-spacing: -0.76px;
+  }
+}
+
+.contact-details {
+  display: flex;
+  margin-top: 1.625em;
+}
+
+.txtField {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  & input {
+    border: none;
+    border-bottom: 1px solid $secondFont;
+    padding: 15px 0 5px 0;
+    opacity: 0.5;
+  }
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+  width: 56%;
+
+  & textarea {
+    border: none;
+    border-bottom: 1px solid $secondFont;
+    padding: 15px 0 5px 0;
+    opacity: 0.5;
+  }
+}
+
+.contact-submit {
+  width: 100%;
+
+  input {
+    background: none;
+    border: 1px solid $primeBackground;
+    color: $primeFont;
+    float: right;
+    margin: 20px 170px 20px 0;
+    text-align: center;
+    padding: 10px 30px;
+
+    &:hover {
+      border: 1px solid $primeFont;
+      cursor: pointer;
+    }
+  }
+}
+

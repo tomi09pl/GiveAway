@@ -4,6 +4,8 @@ import HomeThreeColumns from "./HomeThreeColumns";
 import HomeSimpleSteps from "./HomeSimpleSteps";
 import HomeAboutUs from "./HomeAboutUs";
 import HomeCharitiesList from "./HomeCharitiesList";
+import HomeContact from "./HomeContact";
+import Footer from "./Footer";
 
 class Home extends Component {
 
@@ -15,6 +17,8 @@ class Home extends Component {
                 <HomeSimpleSteps/>
                 <HomeAboutUs/>
                 <HomeCharitiesList/>
+                <HomeContact/>
+                <Footer/>
             </>
         )
     }
