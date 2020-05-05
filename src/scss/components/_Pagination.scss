@@ -1,0 +1,104 @@
+@import "../settings/colors";
+
+.pagination-wrapper{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagination-header {
+  color: $primeFont;
+  font-size: 1.375em; //22px
+  line-height: 1.6em; //25px
+  margin-bottom: 35px;
+  text-align: center;
+  width: 40%;
+}
+
+.organisation {
+  color: $primeFont;
+  display: flex;
+  justify-content: space-between;
+  & div {
+    & h3 {
+      font-size: 1.625em; //26px
+      font-weight: 400;
+      line-height: 0;
+    }
+    & p {
+      font-size: 1.125em; //18px
+      font-weight: 300;
+    }
+  }
+}
+
+.outside-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.organisation-middle {
+  display: flex;
+  flex-direction: column;
+}
+
+.inside-wrapper {
+  display: flex;
+  flex-direction: column;
+  & h3 {
+    font-size: 1.625em; //26px
+    font-weight: 400;
+    line-height: 0;
+    margin-bottom: 16px;
+  }
+  & p {
+    font-size: 1.125em; //18px
+    font-weight: 300;
+    line-height: 0;
+  }
+}
+
+.tags {
+  align-items: center;
+  display: flex;
+  font-size: 0.9em; //18px
+  font-weight: 300;
+}
+
+.inside {
+  & :last-child {
+    align-items: flex-end;
+    display: flex;
+    font-size: 1.125em; //18px
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+}
+
+.line {
+  border-top: 1px solid $primeFont;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.pagination {
+  width: 75%;
+}
+
+.pageNumbers {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  & li {
+    border: 1px solid $secondFont;
+    color: $primeFont;
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px 10px;
+  }
+}
+
+.pageNumbers li.active {
+  background: $secondBackground;
+}
