@@ -5,7 +5,9 @@ import './scss/App.scss';
 import {HashRouter as Router, Switch,Route} from "react-router-dom";
 
 import Home from './components/Home';
-import Login from "./components/Login";
+import LogIn from "./components/LogIn";
+import SignUp from "./components/SignUp";
+import LogOut from "./components/LogOut";
 
 function App() {
   return (
@@ -13,8 +15,9 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Home}/>
-          <Route path="/login" component={Login}/>
-          <Route path="/signup"/>
+          <Route path="/login" component={LogIn}/>
+          <Route path="/signup" component={SignUp}/>
+          <Route path="/logout" component={LogOut}/>
           {/*<Route component={NotFound}/>*/}
         </Switch>
       </Router>

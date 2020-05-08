@@ -1,0 +1,62 @@
+@import '../settings/colors';
+
+.login-buttons {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 30px;
+  //justify-content: center;
+
+  & a {
+    background: none;
+    border: 1px solid $primeBackground;
+    color: $primeFont;
+    //float: right;
+    //margin: 20px 170px 20px 0;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 30px;
+
+    &:hover {
+      border: 1px solid $primeFont;
+      cursor: pointer;
+    }
+  }
+
+  & input {
+    float: none;
+    margin: auto;
+  }
+}
+
+.login-form {
+  margin-top: 40px ;
+}
+
+.login-inputs{
+  background: $secondBackground;
+  padding: 15px 55px;
+  & input {
+    background: transparent;
+  }
+}
+
+.login-nav {
+  height: 20vh;
+  width: 100%;
+}
+
+.login-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  & p{
+    color: $primeFont;
+    font-weight: normal;
+    font-size: 1.875em;
+    letter-spacing: -0.76px;
+    margin:10px 0 ;
+    text-align: center;
+  }
+}
+
