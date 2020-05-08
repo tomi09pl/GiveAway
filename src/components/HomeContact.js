@@ -19,16 +19,34 @@ export default class HomeContact extends React.Component {
     }
 
     handleChange = (e) => {
+
+        let errors = this.state.errors;
+
+        switch (e.target.name) {
+            case 'name':
+                errors.name = false;
+                break;
+            case 'email':
+                errors.email = false;
+                break;
+            case 'message':
+                errors.message = false;
+                break;
+            default:
+                break;
+        }
+
         this.setState({
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
+            errors: errors
         })
     };
 
     handleSubmit = (e) => {
         e.preventDefault();
         // console.log('polecialo!');
-        const {name, value} = e.target;
-        let errors = this.state.errors;
+        let errors = {name:false, email:false, message:false};
+        let hasErrors = false;
 
         //RegEx cases//
         let nameRegex=/^[a-zA-Z]{1,40}$/;
@@ -36,28 +54,48 @@ export default class HomeContact extends React.Component {
         let messageRegex=/^.{120,1000}$/;
         //=========//
 
-        switch (name) {
-            case 'name':
-                console.log(nameRegex.test(value));
-                errors.name = nameRegex.test(value);
-                break;
-
-            case 'email':
-                console.log(emailRegex.test(value));
-                errors.name = emailRegex.test(value);
-                break;
-
-            case 'message':
-                console.log(messageRegex.test(value));
-                errors.name = messageRegex.test(value);
-                break;
-
-            default:
-                break;
+        if (!nameRegex.test(this.state.name)){
+            errors.name = true;
+            hasErrors = true
         }
 
-        this.setState ({
-            errors, [name]: value,}, ()=>{console.log(errors)})
+        if (!emailRegex.test(this.state.email)){
+            errors.email = true;
+            hasErrors = true
+        }
+
+        if (!messageRegex.test(this.state.message)){
+            errors.message = true;
+            hasErrors = true
+        }
+
+        this.setState({
+            errors: errors,
+            successFlag: false
+        });
+
+        if (!hasErrors){
+            const data = {name: this.state.name, email: this.state.email, message: this.state.message};
+
+            fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
+                method: 'POST',
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(data)
+            }).then (resp => {
+                return resp.json();
+            }).then(data => {
+                    this.setState({
+                        successFlag: true,
+                        name: '',
+                        email: '',
+                        message: ''
+                    });
+                    console.log(data)
+                }
+            ).catch(err => {
+                console.log(err)
+            });
+        }
 
     };
 
@@ -70,22 +108,30 @@ export default class HomeContact extends React.Component {
                         <div className="contact-header">
                             <h2>Get in touch</h2>
                             <Decoration/>
+                            {this.state.successFlag && <h3 className='contact-success'>Your message has been sent!<br/>
+                            We will reply shortly.</h3>}
                             <div className="contact-details">
                                 <div className="txtField">
                                     <label htmlFor="contactName">Enter your name</label>
                                     <input type="text" placeholder='Name' name='name'
-                                           value={this.state.name} onChange={this.handleChange}/>
+                                           value={this.state.name} onChange={this.handleChange}
+                                           className={this.state.errors.name ? 'input-error' : ''}/>
+                                    {this.state.errors.name && <span className='input-error-txt'>Name is incorrect!</span>}
                                 </div>
                                 <div className="txtField">
                                     <label htmlFor="contactEmail">Enter your e-mail</label>
                                     <input type="text" placeholder='yourEmail@mail.com' name='email'
-                                           value={this.state.email} onChange={this.handleChange}/>
+                                           value={this.state.email} onChange={this.handleChange}
+                                           className={this.state.errors.email ? 'input-error' : ''}/>
+                                    {this.state.errors.email && <span className='input-error-txt'>Email is incorrect!</span>}
                                 </div>
                             </div>
                             <div className="contact-content">
                                 <label htmlFor="contactMessage">Enter your message</label>
                                 <textarea placeholder='Please start typing your message here...' name='message'
-                                          value={this.state.message} onChange={this.handleChange}/>
+                                          value={this.state.message} onChange={this.handleChange}
+                                          className={this.state.errors.message ? 'input-error' : ''}/>
+                                {this.state.errors.message && <span className='input-error-txt'>Minimum message length is 120 characters!</span>}
                             </div>
                             <div className="contact-submit">
                                 <input type="submit" value='Send'/>

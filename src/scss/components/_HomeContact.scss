@@ -86,3 +86,19 @@
   }
 }
 
+.contact-success {
+  color: #0f9a34;
+  font-weight: 400;
+  text-align: center;
+}
+
+.input-error {
+  border-bottom: 1px solid red !important;
+}
+
+.input-error-txt {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 5px;
+}
+

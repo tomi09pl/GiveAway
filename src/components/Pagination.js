@@ -15,7 +15,7 @@ export default class Pagination extends React.Component {
 
     componentDidUpdate(prevProps, prevState, _) {
         if(prevProps.data !== this.props.data) {
-            this.setState({orgArr: this.props.data});
+            this.setState({orgArr: this.props.data, currentPage: 1});
         }
     }
 

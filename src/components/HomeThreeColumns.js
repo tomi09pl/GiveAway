@@ -7,9 +7,9 @@ class HomeThreeColumns extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            bagsCount: 0,
-            charCount: 0, //charities counter
-            collCount: 0 //collections counter
+            bagsCount: 10,
+            charCount: 23, //charities counter
+            collCount: 58 //collections counter
         }
     };
 
