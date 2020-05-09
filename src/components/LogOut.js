@@ -6,9 +6,6 @@ import Nav from "./Nav";
 
 
 export default class LogOut extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
@@ -30,4 +27,4 @@ export default class LogOut extends React.Component {
         )
     }
 
-}
+};
