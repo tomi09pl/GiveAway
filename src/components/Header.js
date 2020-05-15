@@ -10,15 +10,17 @@ const Header = () => (
     <div className="header">
 
         <Nav/>
-        <div className="headerImg"></div>
-        <div className="costam">
-            <p>Start helping!</p>
-            <p>Donate your unwanted stuff into good hands</p>
-            <Decoration/>
-            <ul className='headerButtons'>
-                <li><Link to='/login'>DONATE STUFF</Link></li>
-                <li><Link to='/login'>ORGANISE COLLECTION</Link></li>
-            </ul>
+        <div className="header-wrapper">
+            <div className="headerImg"></div>
+            <div className="header-callToAction">
+                <p>Start helping!</p>
+                <p>Donate your spare items into good hands</p>
+                <Decoration/>
+                <ul className='headerButtons'>
+                    <li><Link to='/login'>DONATE<br/>ITEMS</Link></li>
+                    <li><Link to='/login'>ORGANISE COLLECTION</Link></li>
+                </ul>
+            </div>
         </div>
 
 
